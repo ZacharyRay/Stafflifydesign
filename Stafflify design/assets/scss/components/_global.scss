@@ -1,0 +1,60 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $background;
+}
+
+a {
+  text-decoration: none; 
+}
+
+//color classes
+
+.red {
+  color: $arrow-red !important;
+}
+.green {
+  color: $arrow-green;
+}
+.lightgrey {
+  color: $light-grey;
+}
+.lightblue {
+  color: $light-blue;
+}
+.primary-green {
+  color: $green;
+}
+.orange {
+  color: $orange;
+}
+
+.bg-green {
+  background-color: $green;
+}
+.bg-orange {
+  background-color: $light-orange;
+}
+.border-orange {
+  border-color: $border-orange !important;
+}
+.bg-dark-orange {
+  background-color: $dark-orange;
+}
+
+.bg-lightgreen {
+  background-color: $light-green;
+}
+.border-green {
+  border-color: $border-green !important;
+}
+
+
+
+
+.content {
+  @include g-width;
+  @include g-padding;
+}

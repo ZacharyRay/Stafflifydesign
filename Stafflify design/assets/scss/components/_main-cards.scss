@@ -1,0 +1,238 @@
+.main-cards-wrapper {
+  margin-top: 30px;
+  .main-cards-wrapper__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 25px;
+  }
+}
+
+.card-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid $light-grey;
+  position: relative;
+  justify-content: space-between;
+  border-radius: 7px 7px 0px 0px;
+  background-color: $white;
+
+  .border-attitude {
+    height: 60%;
+    width: 2px;
+    border-radius: 50px;
+    margin-right: 10px;
+    position: absolute;
+  }
+  .card-head-text-content {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    align-items: center;
+    p:nth-child(2) {
+      @include size-000;
+      height: 11px;
+      padding: 0px 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      border: 1px solid;
+    }
+  }
+  .card-head-content {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    align-items: center;
+  }
+
+  .card-head__users {
+    height: 25px;
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    position: relative;
+    width: 68px;
+    grid-template-columns: repeat(auto-fit, minmax(13px, 1fr));
+    margin-right: 20px;
+    img {
+      border-radius: 50px;
+    }
+  }
+
+  p:nth-child(1) {
+    @include size-300-bold;
+    margin-right: 12px;
+    color: $black;
+  }
+  .fa-ellipsis-v {
+    margin-right: 10px;
+    color: $dark-grey;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+}
+
+.settings {
+  position: absolute;
+  background-color: $white;
+  border: 1px solid $light-grey;
+  @include border-radius;
+  right: 0;
+  top: 50px;
+  padding: 0px 10px;
+  display: none;
+  z-index: 9;
+  p {
+    cursor: pointer;
+    @include size-100;
+  }
+}
+
+#results-card-id {
+  justify-content: flex-start !important;
+}
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background: $light-grey;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $dark-grey;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.results-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-left: 1px solid $light-grey;
+  border-right: 1px solid $light-grey;
+  cursor: grab;
+  overflow-y: auto;
+
+  .result-card__box {
+    width: 110px;
+    min-width: 110px;
+    height: 72px;
+    border: 1px solid $light-grey;
+    @include border-radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10px;
+    background-color: $white;
+    p {
+      @include remove-margin-blocks;
+    }
+    p:nth-child(1) {
+      @include size-000;
+      color: $dark-grey;
+    }
+    p:nth-child(2) {
+      @include size-500;
+    }
+  }
+}
+
+/* target */
+
+.target-wrap {
+  background-color: $white;
+  border: 1px solid $light-grey;
+  padding: 20px;
+  p {
+    @include remove-margin-blocks;
+  }
+  p:nth-child(1) {
+    color: $dark-grey;
+    @include size-000;
+  }
+  .target-deals, .target-calls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 14px;
+    .fa-hands-helping, .fa-phone-volume {
+      color: $white;
+      padding: 6px;
+      font-size: 1rem;
+      border-radius: 4px;
+      height: 15px;
+      width: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      align-self: flex-end;
+    }
+    .fa-hands-helping {
+        background-color: $dark-blue;
+    }
+    .fa-phone-volume {
+        background-color: $green;
+    }
+
+    .deals-info, .calls-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .deals-text, .calls-text {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 6px 0px;
+
+            p:nth-child(1) {
+                color: $light-black;
+                @include size-200;
+                
+            }
+            p:nth-child(2) {
+                color: $grey;
+                @include size-200;
+                strong {
+                    color: $light-black;
+                }
+            }
+        }
+    }
+  }
+}
+
+.deals-process-bar {
+    width: 100%;
+    height: 5px;
+    background-color: $dark-grey;
+    @include border-radius;
+    .deals-process {
+        height: 5px;
+        background-color: $dark-blue;
+        @include border-radius;
+    }
+}
+
+.calls-process-bar {
+    width: 100%;
+    height: 5px;
+    background-color: $dark-grey;
+    @include border-radius;
+ .calls-process {
+    height: 5px;
+    background-color: $green;
+    @include border-radius;
+ }   
+}
